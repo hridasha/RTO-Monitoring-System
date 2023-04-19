@@ -1,0 +1,54 @@
+<section style="padding: 70px;">
+<div *ngIf="!signincon">
+  <h1 style="color:#551f18;margin-left:500px">Applicant Sign In</h1>
+  <div style="margin-left: 320px;">
+  <form (submit)="submit()">
+    <label for="appnumber">LL Application Number:</label><br>
+    <input type="text" id="appnumber" name="appnumber" [(ngModel)]="appNumber" required><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" [(ngModel)]="dob" style="width:230px" required><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required><br>
+
+    <button type="submit">Enter exam</button>
+  </form>
+</div>
+</div>
+
+<div *ngIf="signincon">
+  <form (ngSubmit)="submitExam()">
+    <h2>RTO Questions</h2>
+
+    <h4>Question 1</h4>
+    <p>What does the acronym RTO stand for?</p>
+    <input type="radio" id="rto1a" name="rto1" value="a" required>
+    <label for="rto1a">A. Regional Transport Office</label><br>
+    <input type="radio" id="rto1b" name="rto1" value="b">
+    <label for="rto1b">B. Road Transport Organization</label><br>
+    <input type="radio" id="rto1c" name="rto1" value="c">
+    <label for="rto1c">C. Road Traffic Office</label><br>
+
+    <h4>Question 2</h4>
+    <p>What is the minimum age for obtaining a driving license in India?</p>
+    <input type="radio" id="rto2a" name="rto2" value="a" required>
+    <label for="rto2a">A. 16 years</label><br>
+    <input type="radio" id="rto2b" name="rto2" value="b">
+    <label for="rto2b">B. 18 years</label><br>
+    <input type="radio" id="rto2c" name="rto2" value="c">
+    <label for="rto2c">C. 21 years</label><br>
+
+    <h4>Question 3</h4>
+    <p>What is the penalty for driving without a valid driving license?</p>
+    <input type="radio" id="rto3a" name="rto3" value="a" required>
+    <label for="rto3a">A. Fine of Rs. 5000 and/or imprisonment up to 3 months</label><br>
+    <input type="radio" id="rto3b" name="rto3" value="b">
+    <label for="rto3b">B. Fine of Rs. 10000 and/or imprisonment up to 6 months</label><br>
+    <input type="radio" id="rto3c" name="rto3" value="c">
+    <label for="rto3c">C. Fine of Rs. 2000 and/or imprisonment up to 1 month</label><br>
+
+    <p>Your exam score is: {{score}} out of 3</p>
+    <button type="submit">submit</button></form></div>
+
+</section>

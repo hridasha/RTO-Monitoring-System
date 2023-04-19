@@ -1,0 +1,16 @@
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0px;
+    color: #481313;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#sect {
+    padding: 100px;
+}

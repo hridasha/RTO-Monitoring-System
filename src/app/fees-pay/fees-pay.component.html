@@ -1,0 +1,40 @@
+<section style="padding:100px">
+<div *ngIf="!paymentConfirmed">
+  <h1 style="font-weight: bold;">Enter Payment Information</h1>
+  <form>
+    <label for="nameOnCard">Name on Card</label>
+    <input type="text" name="nameOnCard" [(ngModel)]="nameOnCard" required>
+
+    <label for="cardNumber">Card Number</label>
+    <input type="text" name="cardNumber" [(ngModel)]="cardNumber" required>
+
+    <label for="expirationDate">Expiration Date</label>
+    <input type="text" name="expirationDate" [(ngModel)]="expirationDate" required>
+
+    <label for="cvv">CVV</label>
+    <input type="text" name="cvv" [(ngModel)]="cvv" required>
+
+    <button (click)="submit()">Submit Payment</button>
+  </form>
+</div>
+
+<div *ngIf="paymentConfirmed">
+  <h1 style="font-weight: bold;">Payment Confirmed</h1>
+  <p>Thank you for your payment of Rs.100.</p>
+
+  <h4>Payment Details:</h4>
+  <table>
+    <tr>
+      <th>Name on Card</th>
+      <td>{{nameOnCard}}</td>
+    </tr>
+    <tr>
+      <th>pyed for</th>
+      <td>license</td>
+    </tr>
+    
+  </table>
+
+  
+</div>
+</section>

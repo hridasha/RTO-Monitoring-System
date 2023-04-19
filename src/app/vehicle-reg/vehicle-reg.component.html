@@ -1,0 +1,62 @@
+
+<section style="padding: 100px;">
+<div *ngIf="!vehreg">
+<form (ngSubmit)="onSubmit()" style="font-weight: bold;">
+    <label for="vehicleType">Vehicle Type:</label>
+    <select id="vehicleType" name="vehicleType" required>
+      <option value="">--Select--</option>
+      <option value="car">Car</option>
+      <option value="motorcycle">Motorcycle</option>
+      <option value="truck">Truck</option>
+    </select>
+    <br>
+  
+    <h2 style="font-weight: bold; color:#370d0d;margin-left:200px">Owner Details</h2>
+    <div style="font-weight: bold;">
+      <label for="firstName">Name:</label>
+      <input type="text" id="firstName" name="firstName"><br>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName">
+    </div>
+    <div style="font-weight: bold;">
+      <label for="relation">Son/Daughter/Wife of:</label>
+      <input type="text" id="relation" name="relation">
+    </div>
+    <div style="font-weight: bold;">
+      <label for="chassisNo">Chassis No.:</label>
+      <input type="text" id="chassisNo" name="chassisNo" >
+    </div>
+    <div>
+      <label for="engineNo">Engine No.:</label>
+      <input type="text" id="engineNo" name="engineNo" >
+    </div>
+    <div>
+      <label for="makerName">Maker Name:</label>
+      <input type="text" id="makerName" name="makerName" >
+    </div>
+    <div>
+      <label for="modelName">Model Name:</label>
+      <input type="text" id="modelName" name="modelName" >
+    </div>
+    <div>
+      <label for="registrationDate">Registration Date:</label>
+      <input type="text" id="registrationDate" name="registrationDate">
+    </div>
+    <div>
+      <label for="taxValidUpto">Tax Valid UpTo:</label>
+      <input type="text" id="taxValidUpto" name="taxValidUpto" >
+    </div>
+    <div>
+      <label for="fuelType">Fuel Type:</label>
+      <input type="text" id="fuelType" name="fuelType" >
+    </div>
+    <div>
+      <label for="color">Color:</label>
+      <input type="text" id="color" name="color">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div *ngIf="vehreg">
+    <p>Form submitted</p>
+</div></section>

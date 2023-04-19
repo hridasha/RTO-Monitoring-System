@@ -1,0 +1,56 @@
+<section style="font-weight: bold;padding:100px"><div *ngIf="!fanreg">
+    <form (ngSubmit)="onSubmit()">
+        <label for="vehicleType">Vehicle Type:</label>
+        <select id="vehicleType" name="vehicleType" required>
+            <option value="">--Select--</option>
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+        </select>
+        <br>
+
+        <h2 style="font-weight: bold;color:#511717">Owner Details</h2>
+        <div>
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+        <div style="width:94%">
+            <label for="makerName">Maker Name:</label>
+            <input type="text" id="makerName" name="makerName">
+        </div>
+        <div style="width:94%">
+            <label for="modelName">Model Name:</label>
+            <input type="text" id="modelName" name="modelName" >
+        </div>
+        <div style="width:94%">
+            <label for="registrationDate">Registration Date:</label>
+            <input type="text" id="registrationDate" name="registrationDate" >
+        </div>
+        <div style="width:94%">
+            <div>
+                <label for="hasFancyNumber">Do you have a fancy number?</label>
+                <div>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="hasFancyNumber" value="yes"
+                        (change)="onFancyNumberChange($event)">
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="hasFancyNumber" value="no" (change)="onFancyNumberChange($event)">
+                </div>
+            </div>
+
+            <div *ngIf="isFancyNumber">
+                <label for="fancyNumber">Fancy Number:</label>
+                <input type="text" id="fancyNumber" name="fancyNumber">
+            </div>
+
+            
+
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div *ngIf="fanreg">
+    <p>Form submitted</p>
+</div></section>

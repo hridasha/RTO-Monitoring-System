@@ -1,0 +1,28 @@
+<section id="sect">
+<div *ngIf="!delreg">
+<form (ngSubmit)="onSubmit()"style="font-weight: bold;">
+    
+  
+    <h2 style="font-weight: bold;color:#631616">Owner Details</h2>
+    <div >
+      <label for="firstName">Name:</label>
+      <input type="text" id="firstName" name="firstName">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName">
+    </div>
+    
+    <div>
+      <label for="officeaddress">Office address:</label>
+      <input type="address" id="officeadress" name="officeaddress" >
+    </div>
+    <div class="form-group">
+        <label for="docs">upload docs</label>
+        <input type="file" class="form-control-file" id="docs">
+      </div>
+      
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div *ngIf="delreg">
+    <p>Form submitted</p>
+</div></section>

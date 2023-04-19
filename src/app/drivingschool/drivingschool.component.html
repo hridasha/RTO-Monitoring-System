@@ -1,0 +1,84 @@
+<section style="width: 90%;padding:70px">
+    <h2
+        style="color: #551f18; font-weight: bold;padding-top: 110px;font-size:x-large;margin-top:-30px;margin-left:500px">
+        Driving School Online Application</h2>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+        <option value="">SELECT STATE</option>
+        <option value="Gujarat">Gujarat</option>
+    </select><br>
+    <label for="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" required><br>
+
+
+    <label for="rto">RTO Name:</label>
+    <select id="rto" name="rto" required>
+        <option value="">SELECT RTO NAME</option>
+        <option value="RTO1">RTO Ahmedabad</option>
+    </select>
+    <br>
+    <label for="owner-license" style=" font-weight: bold;">Is the Owner Having Driving License Number?</label>
+    <input type="radio" id="owner-license-yes" name="owner-license" value="yes" required>
+    <label for="owner-license-yes">Yes</label>
+    <input type="radio" id="owner-license-no" name="owner-license" value="no">
+    <label for="owner-license-no">No</label>
+    <h2 style="color: #551f18; font-weight: bold;">Owner Details</h2>
+    <form name="myform">
+        <label for="owner-first-name">First Name:</label>
+        <input type="text" id="owner-first-name" name="owner-first-name"><br>
+
+
+        <label for="owner-last-name">Last Name:</label>
+        <input type="text" id="owner-last-name" name="owner-last-name"><br>
+
+
+        <label for="owner-gender" style="font-weight: bold;">Gender:</label>
+        <input type="radio" id="male" name="owner-gender" value="male" style="margin-left: -1290px;">
+        <label for="male" style="font-weight: bold;display:inline-block">Male</label>
+        <input type="radio" id="female" name="owner-gender" value="female"style="margin-left: -1290px;">
+        <label for="female" style="font-weight: bold;">Female</label>
+
+
+        <label for="owner-dob">D.O.B.:</label>
+        <input type="text" id="owner-dob" name="owner-dob"><br>
+
+        <label for="owner-mobile-no">Mobile No:</label>
+        <input type="tel" id="owner-mobile-no" name="owner-mobile-no" pattern="[0-9]{10}"><br>
+
+
+    </form>
+    <h2 style="color: #551f18; font-weight: bold;">Driving School Details</h2>
+    <form>
+        <label for="school-name">Driving School Name:</label>
+        <input type="text" id="school-name" name="school-name"><br>
+
+        <label for="cov">COV:</label>
+        <select id="cov" name="cov" multiple>
+            <option value="mc50cc">MOTOR CYCLE LESS THAN 50CC (MC50CC)</option>
+            <option value="mcwog">MOTOR CYCLE WITHOUT GEAR (NON TRANSPORT) (MCWOG)</option>
+            <option value="mcwg">MOTOR CYCLE WITH GEAR (NON TRANSPORT) (MCWG)</option>
+            <option value="lmv">LIGHT MOTOR VEHICLE (LMV)</option>
+        </select><br>
+
+        <label for="owner-mobile">Mobile No :</label>
+        <input type="tel" id="owner-mobile" name="owner-mobile" pattern="[+][9][1][0-9]{10}" required><br>
+
+
+        <label for="facilities">Available Facilities :</label><br>
+
+        <textarea id="facilities" name="facilities" rows="4" cols="50"></textarea><br>
+        <h2 style="color: #551f18; font-weight: bold;">Vehicl reg</h2>
+        <input type="text" id="vehicle-regn-no" name="vehicle-regn-no">
+        <h2 style="color: #551f18; font-weight: bold;">Staff Details</h2>
+        <label for="dl-number">DL Number:</label>
+        <input type="text" id="dl-number" name="dl-number"><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br>
+    </form>
+    
+    <button type="submit">Submit Query</button>
+    <div class="error-message" >
+        <p id="error-text"></p>
+      </div>
+</section>

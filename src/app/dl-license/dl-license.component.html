@@ -1,0 +1,186 @@
+
+<section id="application-submission">
+    <h2 style="margin-left: 250px;font-size:xx-large; color: #2f0904">Instructions for Application Submission</h2>
+    <p>Following are the stages of application for applying learners licence:</p>
+    <b><ol style="color:#551f18">
+        <li>FILL APPLICATION DETAILS LL</li>
+        <li>UPLOAD DOCUMENTS</li>
+        <li>UPLOAD PHOTO AND SIGNATURE (In case of eKYC through Aadhaar, only Signature need to be uploaded)</li>
+        <li>LL SLOT BOOK</li>
+        <li>FEE PAYMENT</li>
+        <li>VERIFY THE PAYMENT STATUS</li>
+        <li>PRINT THE RECEIPT</li>
+    </ol></b>
+    <label>
+        <input type="radio" name="lType" value="driving">
+        Driving Licence
+    </label>
+    
+    <label>
+        <input type="radio" name="lType" value="learner">
+        Learner Licence
+    </label>
+    <DIV  style="display: flex; align-items: center;">
+    <label for="category"style="color: #551f18; font-weight: bold;">Select Category if required:</label>
+    <select id="category" name="category">
+        <option value="general">General</option>
+        <option value="no-license">Diplomats </option>
+        <option value="driving-license">Refugees</option>
+    </select></DIV>
+    <label>
+
+        <input type="radio" name="licenseType" value="none">
+        Applicant does not hold any Driving/Learner licence issued in India
+    </label>
+
+    <label>
+        <input type="radio" name="licenseType" value="driving">
+        Applicant holds Driving Licence
+    </label>
+
+    <label>
+        <input type="radio" name="licenseType" value="learner">
+        Applicant holds Learner Licence
+    </label>
+    <b><label style="color: #551f18; ">Please Select RTO Office to display camps/Sewa kendras:</label></b>
+    <select [(ngModel)]="selectedRtoCode">
+        <option value="">--Select RTO--</option>
+        <option value="GJ01">Ahmedabad (RTO) - GJ01</option>
+        <option value="GJ27">Ahmedabad (East) - GJ27</option>
+        <option value="GJ14">Amreli - GJ14</option>
+    </select>
+
+    <div *ngIf="selectedRtoCode === 'GJ01'">
+        <h2>Authorized License Processing Centers (LPC)/RTO-Camps for issue of Learner License</h2>
+        <p>Following are the authorized License Processing Centers(LPC)/RTO-Camps for issue of Learner License.</p>
+        <p>i. To get service from a LPC RTO-Camp - Select the specific LPC office by clicking in the corresponding radio
+            button and then press Submit button.</p>
+        <p>ii. Otherwise, to get service directly from the RTO Office press "SUBMIT" button directly (without selecting
+            any radio button).</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>RTO Code</th>
+                    <th>Camp/College/Sewa Kendra</th>
+                    <th>Camp/Sewa kendra Address</th>
+                    <th>Service Type</th>
+                    <th>College or Camp or Sewa Kendra Name</th>
+                    <th>Opened for public</th>
+                    <th>Camp/Sewa Kendra Start Date</th>
+                    <th>Camp/Sewa kendra End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="rtoCamp"></td>
+                    <td>GJ01</td>
+                    <td>License Issuing Centers</td>
+                    <td>WIAA SUNDARAM BUNGALOWS OPPOSITE C N VIDHYALAYA CIRCLE BESIDES GIRIDHAR PARK SOCIETY AMBAWADI
+                        AHMEDABAD 38006</td>
+                    <td>LL,LL</td>
+                    <td>WIAA</td>
+                    <td>Open for citizens</td>
+                    <td>2017-12-21</td>
+                    <td>2023-12-31</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" (click)="submit()" style="margin: 20px;">Submit</button>
+                <button type="button" class="btn btn-default" (click)="refresh()">Refresh</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="selectedRtoCode === 'GJ27'">
+        <h2>Authorized License Processing Centers (LPC)/RTO-Camps for issue of Learner License</h2>
+        <p>i. To get service from an LPC RTO-Camp - Select the specific LPC office by clicking on the corresponding
+            radio button and then press Submit button.</p>
+        <p>ii. Otherwise, to get service directly from the RTO Office, press "SUBMIT" button directly (without selecting
+            any radio button).</p>
+        <p>Fresh Learner Licence are issued through ITSS/Camps only (Not issued at RTO Office).</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>RTO Code</th>
+                    <th>Camp/College/Sewa Kendra</th>
+                    <th>Camp/Sewa Kendra Address</th>
+                    <th>Service Type</th>
+                    <th>College or Camp or Sewa Kendra Name</th>
+                    <th>Opened for public</th>
+                    <th>Camp/Sewa Kendra Start Date</th>
+                    <th>Camp/Sewa Kendra End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="camp" value="ITI KHOKHARA-MANINAGAR AHMEDABAD"></td>
+                    <td>GJ27</td>
+                    <td>License Issuing Centers</td>
+                    <td>B/H.KHARIKAT CANAL, NR NEW RTO, VASTRAL</td>
+                    <td>LD</td>
+                    <td>ITI KHOKHARA-MANINAGAR AHMEDABAD</td>
+                    <td>Open for citizens</td>
+                    <td>2019-10-15</td>
+                    <td>2023-12-31</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" (click)="submit()" style="padding:20px;">Submit</button>
+                <button type="button" class="btn btn-default" (click)="refresh()">Refresh</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedRtoCode === 'GJ14'">
+        <h2>Authorized License Processing Centers (LPC)/RTO-Camps for issue of Learner License</h2>
+        <p>Following are the authorized License Processing Centers(LPC)/RTO-Camps for issue of Learner License.</p>
+        <p>i. To get service from an LPC RTO-Camp - Select the specific LPC office by clicking on the corresponding
+            check-box and then press Submit button.</p>
+        <p>ii. Otherwise, to get service directly from the RTO Office press "SUBMIT" button directly (without checking
+            the Check box against any institute).</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Check to select</th>
+                    <th>RTO Code</th>
+                    <th>Camp/College/Sewa Kendra</th>
+                    <th>Camp/Sewa Kendra Address</th>
+                    <th>Service Type</th>
+                    <th>College or Camp or Sewa Kendra Name</th>
+                    <th>Opened for public</th>
+                    <th>Camp/Sewa Kendra Start Date</th>
+                    <th>Camp/Sewa Kendra End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>GJ14</td>
+                    <td>License Issuing Centers</td>
+                    <td>Near Railway Crossing, Dungar Road, Rajula</td>
+                    <td>LD</td>
+                    <td>ITI RAJULA AMRELI</td>
+                    <td>Open for citizens</td>
+                    <td>2019-10-17</td>
+                    <td>2023-12-31</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" (click)="submit()" style="margin: 20px;">Submit</button>
+                <button type="button" class="btn btn-default" (click)="refresh()">Refresh</button>
+            </div>
+        </div>
+        
+    </div>
+
+</section>

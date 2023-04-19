@@ -1,0 +1,81 @@
+#application-submission {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 100px;
+    font-family: Arial, sans-serif;
+  }
+  
+  #application-submission h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #application-submission p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  #application-submission ol {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  
+  #application-submission label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  #application-submission select {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  #application-submission table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
+  #application-submission table th,
+  #application-submission table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  #application-submission table th {
+    font-size: 16px;
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+  #application-submission table td {
+    font-size: 14px;
+  }
+  
+  #application-submission .row {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #application-submission .col-md-12 {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  #application-submission button {
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #C53F3F;
+  }
+  
+  #application-submission button:hover {
+    background-color: #FF725E;
+    padding: 20px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,37 @@
+<section id="sect">
+<h2 style="color: #410d0d;">Book a Slot</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time Slot</th>
+      <th>Available</th>
+      <th>Select</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10:00 AM - 11:00 AM</td>
+      <td>Yes</td>
+      <td><input type="radio" name="timeSlot" value="10AM"></td>
+    </tr>
+    <tr>
+      <td>11:00 AM - 12:00 PM</td>
+      <td>No</td>
+      <td><input type="radio" name="timeSlot" value="11AM" disabled></td>
+    </tr>
+    <tr>
+      <td>12:00 PM - 01:00 PM</td>
+      <td>Yes</td>
+      <td><input type="radio" name="timeSlot" value="12PM"></td>
+    </tr>
+    <tr>
+      <td>01:00 PM - 02:00 PM</td>
+      <td>Yes</td>
+      <td><input type="radio" name="timeSlot" value="1PM"></td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="submit" (click)="submit()">Book Slot</button>
+</section>

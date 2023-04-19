@@ -1,0 +1,82 @@
+<section style="padding: 100px;">
+<div *ngIf="!table">
+  <table>
+    <thead>
+      <tr>
+        <th>Total National Permit Authorization</th>
+        <th>All Over India</th>
+        <th>Till Yesterday Issued (All Over India) Till Yesterday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Total Permit Count</td>
+        <td>1,29,42,746</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Total Permit Amount</td>
+        <td>2,11,68,63,30,000/-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>DELHI</td>
+        <td>4,00,176</td>
+        <td>6,54,52,39,500/-</td>
+      </tr>
+      <tr>
+        <td>GOA</td>
+        <td>6,814</td>
+        <td>11,16,19,500/</td>
+      </tr>
+      <tr>
+        <td>GUJRAT</td>
+        <td>6,15,588</td>
+        <td>10,06,60,30,500/-</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="!linkk && !reg && !paytab" style="margin-top: -180px;">
+  <div class="card-container">
+    <div class="card">
+      <button (click)="regshow()">Online Payment of National Permit</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="reg" >
+  <div class="modal" id="payment-modal" *ngIf="reg">
+    <div class="modal-content">
+      <h3>Payment & Transaction Status</h3>
+      <form (submit)="submitreg()">
+        <label for="reg-no">Registration No:</label>
+        <input type="text" id="reg-no" name="reg-no" [(ngModel)]="regNo" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="paytab">
+  <table id="payment-table">
+    <thead>
+      <tr>
+        <th>Transaction Status</th>
+        <th>transaction for</th>
+        <th>Paid Money</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>paid</td>
+        <td>learners license</td>
+        <td>2000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
